@@ -1,0 +1,15 @@
+.loginFooter{
+    background-color: #F54291;
+    height: 150px;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginImg{
+    width: 100%;
+    width: auto;
+    margin: 20px auto;
+}
