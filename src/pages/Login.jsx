@@ -4,6 +4,9 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import loginAction from "../../redux/actions/loginForm";
 import { useNavigate } from "react-router-dom";
+import './Login.css'
+import PasswordToggleInput from "../components/PasswordToggle";
+import { NavLink } from 'react-router-dom'
 
 export default function Login() {
   const emailRef = useRef();
@@ -12,6 +15,10 @@ export default function Login() {
   const dispatch = useDispatch();
   let store = useSelector((state) => state.loginReducer);
   const navigate = useNavigate();
+
+
+
+
 
   console.log(store);
   async function saveData(e) {
@@ -53,7 +60,7 @@ export default function Login() {
   }
 
   return (<>
-  <form className="form-login" ref={formRef}>
+  {/* <form className="form-login" ref={formRef}>
     <p id="heading">Sign in</p>
     <div className="field">
     <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -75,6 +82,35 @@ export default function Login() {
           value="Submit"
         />
       </div>
+</form> */}
+
+<form className="container-form" ref={formRef}>
+  <div className="mb-3">
+    {/*  CARTEL INICIAR SESION */}
+    <div className="loguearse">
+      <p className="login">Iniciar Sesión</p>
+    </div>
+    <input placeholder="Username" id="email" name="email" className="form-control text-formulario" type="email"  ref={emailRef} required/>
+  </div>
+  <div className="mb-3">
+    <PasswordToggleInput />
+  </div>
+     {/* ENLACE A "NO TIENES CUENTA?" */}
+
+     <p className="sin-cuenta text-formulario">
+      <NavLink to='/signup'>No tienes una cuenta?</NavLink>
+        
+      </p>
+   {/* BOTON SUBMIT */}
+   <div className="container-submit-two">
+        <input
+          onClick={saveData}
+          className="submit-signup"
+          type="button"
+          value="Login"
+        />
+      </div>
 </form>
+
  </> );
 }

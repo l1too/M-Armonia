@@ -3,6 +3,8 @@ import './Inicio/input.css'
 import axios from 'axios'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import PasswordToggleInput from '../components/PasswordToggle';
+import { NavLink } from 'react-router-dom'
 
 export default function Input() {
   const navigate = useNavigate();
@@ -54,36 +56,93 @@ export default function Input() {
   }
 }
 return (
-  <form className="form-login-singup" ref={formRef}>
-  <p id="heading">Sign Up</p>
-  <div className="field">
-  
-    <input placeholder="Name" className="input-field" type="text" id="name" ref={nameRef} required/>
+<>
+<form className="container-form" ref={formRef}>
+  <div className="mb-3">
+    {/*  CARTEL INICIAR SESION */}
+    <div className="register">
+      <p className="login">Crear Cuenta</p>
   </div>
-  <div className="field">
- 
-    <input placeholder="Last Name" className="input-field" type="text" id="lastname" ref={lastNameRef} required/>
+
+  <div className="mb-3"></div>
+    <input placeholder="Name" className="form-control text-formulario" type="text" id="name" ref={nameRef} required />
   </div>
-  <div className="field">
-  
-    <input placeholder="Age" className="input-field" type="text" id="age" ref={ageRef} required/>
+
+  <div className="mb-3">
+    <input placeholder="Last Name" className="form-control text-formulario" type="text" id="lastname" ref={lastNameRef} required />
   </div>
-  <div className="field">
-  
-    <input placeholder="Email" className="input-field" type="email" id="email" ref={emailRef} required/>
+
+  <div className="mb-3">
+    <input placeholder="Age" className="form-control text-formulario" type="text" id="age" ref={ageRef} required/>
   </div>
-  <div className="field">
-  
-    <input placeholder="Password" className="input-field" type="password" id="passSignIn" ref={passwordRef} required/>
+
+  <div className="mb-3">
+    <input placeholder="Email" className="form-control text-formulario" type="email" id="email" ref={emailRef} required />
   </div>
-  <div className="container-submit-two">
+
+  <div className="mb-3">
+    <PasswordToggleInput />
+  </div>
+
+  <div className="mb-3">
+    <PasswordToggleInput />
+  </div>
+     {/* ENLACE A "NO TIENES CUENTA?" */}
+
+     <p className="sin-cuenta text-formulario">
+      <NavLink to='/login'>Ya tienes una cuenta?</NavLink>
+        
+      </p>
+   {/* BOTON SUBMIT */}
+   <div className="container-submit-two">
       <input
         onClick={saveData}
         className="submit-signup"
         type="button"
-        value="Submit"
+        value="Crear Cuenta"
       />
     </div>
 </form>
-  )
+</> 
+)
 }
+
+
+
+
+
+
+
+
+//   <form className="form-login-singup" ref={formRef}>
+//   <p id="heading">Sign Up</p>
+//   <div className="field">
+  
+//     <input placeholder="Name" className="input-field" type="text" id="name" ref={nameRef} required/>
+//   </div>
+//   <div className="field">
+ 
+//     <input placeholder="Last Name" className="input-field" type="text" id="lastname" ref={lastNameRef} required/>
+//   </div>
+//   <div className="field">
+  
+//     <input placeholder="Age" className="input-field" type="text" id="age" ref={ageRef} required/>
+//   </div>
+//   <div className="field">
+  
+//     <input placeholder="Email" className="input-field" type="email" id="email" ref={emailRef} required/>
+//   </div>
+//   <div className="field">
+  
+//     <input placeholder="Password" className="input-field" type="password" id="passSignIn" ref={passwordRef} required/>
+//   </div>
+//   <div className="container-submit-two">
+//       <input
+//         onClick={saveData}
+//         className="submit-signup"
+//         type="button"
+//         value="Submit"
+//       />
+//     </div>
+// </form>
+
