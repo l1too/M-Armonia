@@ -1,0 +1,6 @@
+.boton {
+    border: 1px solid rgba(30, 197, 152, 1);
+    padding: .8rem;
+    border-radius: 50px;
+    color: rgba(30, 197, 152, 1);
+}

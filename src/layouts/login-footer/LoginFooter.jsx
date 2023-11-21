@@ -6,7 +6,7 @@ export default function LoginFooter(){
         <>
         <img className={styles.loginImg} src={img} alt="" />
         <div className={styles.loginFooter}>
-            <Boton />
+            <Boton texto={"Ingresar"}/>
         </div>
         </>
 

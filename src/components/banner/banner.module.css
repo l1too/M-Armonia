@@ -1,0 +1,27 @@
+
+.banner {
+    display: flex;
+    background-color: rgba(245, 66, 145, 1);
+    height: 7rem;
+    border-radius: 12px;
+    min-width: 282px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}
+
+.img {
+    height: 90%;
+    margin: auto 0;
+}
+.logo {
+    height: 3rem;
+}

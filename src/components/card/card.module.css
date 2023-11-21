@@ -1,0 +1,16 @@
+.cardImg {
+    border: 2px solid rgba(30, 197, 152, 1);
+   height: 7rem;
+   width: 7rem;
+}
+
+.cardBoton {
+    background-color: rgba(245, 66, 145, 1);
+    color: white;
+    font-weight: bold;
+    border-radius: 45px;
+    padding: .8rem;
+    width: 14rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+}
