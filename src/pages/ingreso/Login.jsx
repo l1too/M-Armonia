@@ -41,7 +41,7 @@ export default function Login() {
           icon: "success",
           text: res.data.message,
         });
-        navigate("/");
+        navigate("/home");
       } else {
         Swal.fire({
           icon: "error",
@@ -79,12 +79,15 @@ export default function Login() {
       </p>
    {/* BOTON SUBMIT */}
    <div className="container-submit-two">
-        <input
+        {/* <input
           onClick={saveData}
           className="submit-signup"
           type="button"
           value="Login"
-        />
+        /> */}
+        <NavLink value="Login" onClick={saveData} className="submit-signup">
+          Login
+        </NavLink>
       </div>
 </form>
 

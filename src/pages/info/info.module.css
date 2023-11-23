@@ -1,0 +1,33 @@
+.titulo {
+    background-color: rgba(245, 66, 145, 1);
+    color: white;
+    font-weight: bold;
+    height: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoImg {
+    border: 2px solid rgba(30, 197, 152, 1);
+    margin-top: 1rem;
+    margin: 0 auto;
+    height: 10rem ;
+}
+.contentImg {
+    margin-top: 1rem;
+}
+
+hr {
+  border: 1px solid rgba(30, 197, 152, 1);
+  width: 80%;
+  opacity: 1;
+  margin: 1rem auto !important;
+ 
+}
+
+.ul {
+    list-style:circle !important;
+    text-align: center;
+}
