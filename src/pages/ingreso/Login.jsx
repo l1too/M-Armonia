@@ -4,8 +4,9 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import loginAction from "../../../redux/actions/loginForm";
 import { useNavigate } from "react-router-dom";
-import styles from './login.module.css'
-import Boton from "../../components/Boton/Boton";
+import './Login.css'
+import { NavLink } from 'react-router-dom'
+
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -13,6 +14,10 @@ export default function Login() {
   const dispatch = useDispatch();
   let store = useSelector((state) => state.loginReducer);
   const navigate = useNavigate();
+
+
+
+
 
   console.log(store);
   async function saveData(e) {
@@ -54,27 +59,34 @@ export default function Login() {
   }
 
   return (<>
-  <form className={styles.formLogin} ref={formRef}>
-    <div className={styles.loginTitle}>
-      <p id="heading">Iniciar Sesion</p>
-    </div>
-    <div className="field">
 
-      <input placeholder="Username" className={styles.loginEmail} type="email" id="emailSignIn" ref={emailRef} required/>
+<form className="container-form" ref={formRef}>
+  <div className="mb-3">
+    {/*  CARTEL INICIAR SESION */}
+    <div className="loguearse">
+      <p className="login">Iniciar Sesión</p>
     </div>
-    <div className="field">
+    <input placeholder="Username" id="email" name="email" className="form-control text-formulario" type="email"  ref={emailRef} required/>
+  </div>
+  <div className="mb-3">
+    <input placeholder="Password" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
+  </div>
+     {/* ENLACE A "NO TIENES CUENTA?" */}
 
-      <input placeholder="Password" className={styles.loginPassword} type="password" id="passSignIn" ref={passwordRef} required/>
-    </div>
-    <div className="container-submit-two">
+     <p className="sin-cuenta text-formulario">
+      <NavLink to='/signup'>No tienes una cuenta?</NavLink>
+        
+      </p>
+   {/* BOTON SUBMIT */}
+   <div className="container-submit-two">
         <input
           onClick={saveData}
           className="submit-signup"
           type="button"
-          value="Submit"
+          value="Login"
         />
-        <Boton onClick={saveData} texto={"Login"}type="button" value="Submit" />
       </div>
 </form>
+
  </> );
 }

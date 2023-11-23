@@ -1,0 +1,90 @@
+.loguearse{
+    width: 335px;
+    height: 80px;
+    top: 165px;
+    left: 47px;
+    border-radius: 15px;
+    background: #F54291;
+    font-family: 'Orelega One', serif;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    
+}
+
+.register{
+    width: 98%;
+    height: 80px;
+    top: 165px;
+    left: 47px;
+    border-radius: 15px;
+    background: #1EC598;
+    font-family: 'Orelega One', serif;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+}
+
+.form-control{
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.input-password {
+    color: linear-gradient(0deg, #000000, #000000),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+
+}
+
+.form-control:hover {
+    transform: scale(1.0); /* Escala el componente al 110% al pasar el mouse sobre él */
+}
+
+.form-control:active {
+    transform: scale(1.1); /* Escala el componente al 120% al hacer clic en él */
+}
+
+.submit-signup {
+    margin-top: 1rem;
+}
+
+.sin-cuenta{
+    text-align: end;
+    text-decoration: underline;
+    color: violet;
+}
+
+.text-formulario{
+    font-family: 'Orelega One', serif;
+}
+
+.login{
+    font-family: 'Orelega One', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.01em;
+    text-align: center;
+    
+
+}
+
+.container-form{
+    display: flex;
+    margin: 5rem;
+    gap: 20px;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    
+  
+    .register {
+      font-size: 30px; /* Reduzco aún más el tamaño de fuente para pantallas más pequeñas */
+    }
+  
+    .container-form {
+      margin: 1rem; /* Puedes ajustar según sea necesario */
+    }
+  }
