@@ -19,7 +19,6 @@ export default function Login() {
 
 
 
-  console.log(store);
   async function saveData(e) {
     e.preventDefault();
     let logged = {
@@ -29,7 +28,6 @@ export default function Login() {
     try {
       let res = await axios.post(`http://localhost:4000/api/auth/signin`, logged);
       let tokenx = res.data.response.token;
-      console.log(res.data.response);
       if (res.data.success) {
         dispatch(loginAction.getToken(tokenx));
         localStorage.setItem("token", tokenx);
