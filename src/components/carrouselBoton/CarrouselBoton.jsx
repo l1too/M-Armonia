@@ -5,7 +5,8 @@ export const CarrouselBoton = () => {
   <ul className=' gap-2 justify-center'>
     <button className={styles.boton}>Home</button> 
     <button className={styles.boton}>Documents</button> 
-    <button className={styles.boton}>Add Document</button>
+    {/* Los link se utilizan para navegar, los botones para realizar acciones */}
+    <a href="/music" className={styles.boton}>Musica</a>
   </ul>
 </div>
   )
