@@ -6,6 +6,8 @@ export const CarrouselBoton = () => {
   <ul className=' gap-2 justify-center'>
     <button className={styles.boton}>Home</button> 
     <button className={styles.boton}>Documents</button> 
+    {/* Los link se utilizan para navegar, los botones para realizar acciones */}
+    <a href="/music" className={styles.boton}>Musica</a>
     <button className={styles.boton}>Add Document</button>
     <NavLink to={'/game'}>
     <button className={styles.boton}>Games</button>
