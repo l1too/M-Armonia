@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styles from './carrouselBoton.module.css'
 export const CarrouselBoton = () => {
   return (
@@ -7,6 +8,11 @@ export const CarrouselBoton = () => {
     <button className={styles.boton}>Documents</button> 
     {/* Los link se utilizan para navegar, los botones para realizar acciones */}
     <a href="/music" className={styles.boton}>Musica</a>
+    <button className={styles.boton}>Add Document</button>
+    <NavLink to={'/game'}>
+    <button className={styles.boton}>Games</button>
+
+    </NavLink>
   </ul>
 </div>
   )

@@ -9,7 +9,7 @@ export const Banner = () => {
       <img className={styles.logo} src={logo} alt="" />
         <div className={styles.title}>
             <h2>!Hello¡</h2>
-            <h2>Gabriel Quiroga</h2>
+            <h2>Tadeo Abbruzzese</h2>
         </div>
         <img className={styles.img} src={img} alt="" />
       
