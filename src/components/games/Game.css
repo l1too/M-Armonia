@@ -1,4 +1,6 @@
-:root {
+/* Lo comento porque afecta a todo el sitio, deberian usarse clases o ids para solo modificar los estilos de la page Game.jsx */
+
+/* :root {  
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -18,17 +20,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+  }  body { Lo comento porque afecta a todo el sitio 
     margin: 0;
     display: flex;
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-  }
+  } */
   
-  main {
+  /* main {
     display: grid;
     text-align: center;
     height: 100vh;
@@ -58,7 +58,7 @@
   h1 {
     font-size: 1.5em;
     line-height: 1.1;
-  }
+  } */
 
   .iniciar-game{
     display: flex;
@@ -79,7 +79,7 @@
     border-radius: 5px; /* Bordes redondeados */
     max-width: 200px;
   }
-  button {
+  /* button {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -88,9 +88,9 @@
     font-family: inherit;
     background-color: #1a1a1a;
     cursor: pointer;
-  }
+  } */
   
-  @media (prefers-color-scheme: light) {
+  /* @media (prefers-color-scheme: light) {
     :root {
       color: #213547;
       background-color: #ffffff;
@@ -102,4 +102,4 @@
       background-color: #f9f9f9;
     }
   }
-  
+   */
