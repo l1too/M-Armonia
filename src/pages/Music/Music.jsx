@@ -7,13 +7,24 @@ import { CarrouselBoton } from "../../components/carrouselBoton/CarrouselBoton";
 const Music = () => {
   const [isEmojiActive, setIsEmojiActive] = useState(false);
   const [isActivityActive, setIsActivityActive] = useState(false);
+  const [selection, setSelection] = useState({
+    emoji: "",
+    activity: "",
+  });
 
   const handleClickEmoji = () => {
     setIsEmojiActive(true);
+    setSelection({
+      emoji: event.target.name,
+    });
   };
 
   const handleClickActvity = () => {
     setIsActivityActive(true);
+    setSelection({
+      ...selection,
+      activity: event.target.innerText,
+    });
   };
 
   const SectionEmoji = () => {
@@ -24,18 +35,21 @@ const Music = () => {
         </h2>
         <div className="flex flex-wrap ">
           <button
+            name="CONTENTO"
             className=" text-white font-bold py-2 px-4 rounded text-7xl"
             onClick={() => handleClickEmoji()}
           >
             😃
           </button>
           <button
+            name="TRISTE"
             className=" text-white font-bold py-2 px-4 rounded text-7xl"
             onClick={() => handleClickEmoji()}
           >
             😭
           </button>
           <button
+            name="ENOJADO"
             className=" text-white font-bold py-2 px-4 rounded text-7xl"
             onClick={() => handleClickEmoji()}
           >
@@ -48,13 +62,13 @@ const Music = () => {
 
   const SectionActivity = () => {
     return (
-      <section className="flex flex-col justify-center items-center p-2 m-1">
+      <section className="flex flex-col justify-center items-center p-2 m-2">
         <h2 className="text-2xl font-bold text-center mb-4">
           ¿Qué actividad vas a realizar?
         </h2>
         <div className="flex flex-wrap gap-2">
           <button
-            className="border border-pink-400 text-pink-500 font-bold py-2 px-4 rounded"
+            className="border border-pink-400 text-pink-500 font-bold py-1 px-2 rounded"
             onClick={() => handleClickActvity()}
           >
             Estudiar
@@ -65,18 +79,7 @@ const Music = () => {
           >
             Relajarse
           </button>
-          <button
-            className="border border-pink-400 text-pink-500 font-bold py-2 px-4 rounded"
-            onClick={() => handleClickActvity()}
-          >
-            Dormir
-          </button>
-          <button
-            className="border border-pink-400 text-pink-500 font-bold py-2 px-4 rounded"
-            onClick={() => handleClickActvity()}
-          >
-            Concentrarse
-          </button>
+
           <button
             className="border border-pink-400 text-pink-500 font-bold py-2 px-4 rounded"
             onClick={() => handleClickActvity()}
@@ -101,11 +104,76 @@ const Music = () => {
             scrolling="no"
             frameborder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582"
+            src={getSong()}
           ></iframe>
         </div>
       </section>
     );
+  };
+
+  const getSong = () => {
+    const { emoji, activity } = selection;
+    console.log("emoji", emoji, "activity", activity);
+    let song = "";
+    if (emoji === "CONTENTO") {
+      switch (activity) {
+        case "Estudiar":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Relajarse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Divertirse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+      }
+    }
+
+    if (emoji === "TRISTE") {
+      switch (activity) {
+        case "Estudiar":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Relajarse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Divertirse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+      }
+    }
+
+    if (emoji === "ENOJADO") {
+      switch (activity) {
+        case "Estudiar":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Relajarse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+        case "Divertirse":
+          song =
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          break;
+      }
+    }
+
+    console.log("song", song);
+
+    return song;
+  };
+
+  const handleClickClean = () => {
+    setIsEmojiActive(false);
+    setIsActivityActive(false);
   };
 
   return (
@@ -116,7 +184,20 @@ const Music = () => {
         <SectionEmoji />
         {isEmojiActive && <SectionActivity />}
 
-        {isEmojiActive && isActivityActive && <SectionPlayer />}
+        {isEmojiActive && isActivityActive && (
+          <>
+            <SectionPlayer />
+
+            <div className="flex-row text-center pt-4">
+              <button
+                className="border border-pink-400 text-white bg-pink-600 font-bold py-1 px-2 rounded"
+                onClick={() => handleClickClean()}
+              >
+                Volver a elegir
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
