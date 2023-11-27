@@ -94,7 +94,7 @@ return (
    <div className="container-submit-two">
       <input
         onClick={saveData}
-        className="submit-signup"
+        className="submit-signup bg-[#F54291] text-white"
         type="button"
         value="Crear Cuenta"
       />

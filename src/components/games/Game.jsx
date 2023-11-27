@@ -1,6 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
+import  { useEffect, useMemo, useState } from "react";
 import { NavLink } from "react-router-dom";
-import './Game.css'
+
+import styles from './Game.module.css'
+import { Banner } from "../banner/Banner";
+import { CarrouselBoton } from "../carrouselBoton/CarrouselBoton";
 
 const COLORS = [
   { name: "rojo", color: "red", correct: false },
@@ -75,22 +78,26 @@ function Game() {
   }, [status]);
 
   return (
-    <main>
-      <header style={{ backgroundColor: "#333" }}>
+    <div className="mx-auto w-[95%] my-2">
+    <Banner/>
+    <CarrouselBoton/>
+    <main className={styles.main}>
+
+      <header className={styles.header} style={{ backgroundColor: "#333" }}>
         <h1>{score} puntos</h1>
         <h1>{time} segundos</h1>
       </header>
       {status === "playing" && (
-        <section>
+        <section className={styles.section}>
           <span style={{ textTransform: "capitalize", color: gameColors[0].color }}>
             {correctColor.name}
           </span>
         </section>
       )}
-      <footer>
+      <footer className={styles.footer}>
         {status === "initial" && (
-        <div className="iniciar-game">
-          <button className="boton-game" style={{ fontSize: 32 }} onClick={handlePlay}>
+        <div className={styles.iniciarGame}>
+          <button className={styles.botonGame} style={{ fontSize: 32 }} onClick={handlePlay}>
             Jugar
           </button>
           <p style={{ fontSize: 18, margin: "20px", textAlign: "center" }}>
@@ -134,6 +141,7 @@ function Game() {
         )}
       </footer>
     </main>
+    </div>
   );
 }
 

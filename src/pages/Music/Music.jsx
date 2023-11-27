@@ -33,7 +33,7 @@ const Music = () => {
         <h2 className="text-2xl font-bold text-center">
           ¿Cómo te sientes hoy?
         </h2>
-        <div className="flex flex-wrap ">
+        <div className="flex flex-wrap justify-center">
           <button
             name="CONTENTO"
             className=" text-white font-bold py-2 px-4 rounded text-7xl"
@@ -66,7 +66,7 @@ const Music = () => {
         <h2 className="text-2xl font-bold text-center mb-4">
           ¿Qué actividad vas a realizar?
         </h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           <button
             className="border border-pink-400 text-pink-500 font-bold py-1 px-2 rounded"
             onClick={() => handleClickActvity()}
@@ -123,11 +123,11 @@ const Music = () => {
           break;
         case "Relajarse":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1162736542";
           break;
         case "Divertirse":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/70627737";
           break;
       }
     }
@@ -136,15 +136,15 @@ const Music = () => {
       switch (activity) {
         case "Estudiar":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/465546846";
           break;
         case "Relajarse":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/537910335";
           break;
         case "Divertirse":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/136748279";
           break;
       }
     }
@@ -153,15 +153,14 @@ const Music = () => {
       switch (activity) {
         case "Estudiar":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/395718615";
           break;
         case "Relajarse":
           song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/145897691";
           break;
         case "Divertirse":
-          song =
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/435378582";
+          song ="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1497533800";
           break;
       }
     }

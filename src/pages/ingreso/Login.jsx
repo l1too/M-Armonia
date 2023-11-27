@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import './Login.css'
 import { NavLink } from 'react-router-dom'
 
+
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -77,13 +78,8 @@ export default function Login() {
       </p>
    {/* BOTON SUBMIT */}
    <div className="container-submit-two">
-        {/* <input
-          onClick={saveData}
-          className="submit-signup"
-          type="button"
-          value="Login"
-        /> */}
-        <NavLink value="Login" onClick={saveData} className="submit-signup">
+   
+        <NavLink value="Login" onClick={saveData} className="submit-signup bg-[#1EC598] text-white">
           Login
         </NavLink>
       </div>
