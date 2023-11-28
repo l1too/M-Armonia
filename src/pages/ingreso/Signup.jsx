@@ -58,9 +58,9 @@ export default function Input() {
 return (
 <>
 <form className="container-form max-w-[700px] mx-auto" ref={formRef}>
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     {/*  CARTEL INICIAR SESION */}
-    <div className="register">
+    <div className="register w-[100%] mx-0">
       <p className="login">Crear Cuenta</p>
   </div>
 
@@ -68,25 +68,25 @@ return (
     <input placeholder="Name" className="form-control text-formulario" type="text" id="name" ref={nameRef} required />
   </div>
 
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     <input placeholder="Last Name" className="form-control text-formulario" type="text" id="lastname" ref={lastNameRef} required />
   </div>
 
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     <input placeholder="Age" className="form-control text-formulario" type="text" id="age" ref={ageRef} required/>
   </div>
 
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     <input placeholder="Email" className="form-control text-formulario" type="email" id="email" ref={emailRef} required />
   </div>
 
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     <input placeholder="Password" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
   </div>
 
      {/* ENLACE A "NO TIENES CUENTA?" */}
 
-     <p className="sin-cuenta text-formulario">
+     <p className="sin-cuenta text-formulario w-[95%] mx-auto">
       <NavLink to='/login'>Ya tienes una cuenta?</NavLink>
         
       </p>

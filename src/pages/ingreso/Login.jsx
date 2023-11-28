@@ -60,21 +60,20 @@ export default function Login() {
   return (<>
 
 <form className="container-form max-w-[700px] mx-auto" ref={formRef}>
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     {/*  CARTEL INICIAR SESION */}
-    <div className="loguearse">
+    <div className="loguearse w-[100%] mx-0">
       <p className="login">Iniciar Sesión</p>
     </div>
     <input placeholder="Username" id="email" name="email" className="form-control text-formulario" type="email"  ref={emailRef} required/>
   </div>
-  <div className="mb-3">
+  <div className="mb-3 w-[95%] mx-auto">
     <input placeholder="Password" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
   </div>
      {/* ENLACE A "NO TIENES CUENTA?" */}
 
-     <p className="sin-cuenta text-formulario">
+     <p className="sin-cuenta text-formulario w-[95%] mx-auto">
       <NavLink to='/signup'>No tienes una cuenta?</NavLink>
-        
       </p>
    {/* BOTON SUBMIT */}
    <div className="container-submit-two">
