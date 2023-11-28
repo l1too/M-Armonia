@@ -57,7 +57,7 @@ export default function Input() {
 }
 return (
 <>
-<form className="container-form" ref={formRef}>
+<form className="container-form max-w-[700px] mx-auto" ref={formRef}>
   <div className="mb-3">
     {/*  CARTEL INICIAR SESION */}
     <div className="register">

@@ -91,7 +91,7 @@ const Notas = () => {
       <Banner />
       <CarrouselBoton />
 
-      <div className="m-3">
+      <div className="my-3 mx-auto max-w-[600px]">
         <button
           className="btn btn-primary"
           onClick={() => setMostrarFormulario(!mostrarFormulario)}
@@ -156,17 +156,19 @@ const Notas = () => {
           .reverse()
           .map((nota) => (
             <div key={nota._id}>
-              <div className="card m-5">
+              <div className="card my-5 mx-auto max-w-[500px]">
                 <h5 className="card-header">{nota.nombreUsuario}</h5>
                 <div className="card-body">
                   <h5 className="card-title">{nota.titulo}</h5>
                   <p className="card-text">{nota.nota}</p>
                   <button
                     style={{
-                      backgroundColor: "red",
+                      backgroundColor: "rgba(245, 66, 145, 1)",
                       color: "white",
                       padding: "10px",
                       borderRadius: "5px",
+                      width:"50%",
+                      margin:"0 auto"
                     }}
                     onClick={() => handleEliminarNota(nota._id)}
                   >

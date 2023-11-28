@@ -32,8 +32,9 @@
     display: grid;
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    max-width: 1200px;
     grid-template-rows: 60px 1fr 256px;
+    margin: 0 auto;
   }
  
   .header{
@@ -53,7 +54,7 @@
     align-items: center;
     justify-content: center;
     gap: 36px;
-    width: 95%;
+    width: 100%;
     margin-bottom: 1rem;
   }
   /*

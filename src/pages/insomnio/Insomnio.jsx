@@ -1,15 +1,24 @@
 import styles from './insomnio.module.css'
 import img from '../../assets/chico.png'
+import icon from '../../assets/flecha3.svg'
+import { NavLink } from 'react-router-dom'
 const Insomnio = () => {
   return (
     <>
         <div className={styles.titulo}>
-        
-            <h2>¿Que es el insomnio?</h2>
+
+        <NavLink to={"/home"}>
+        <img src={icon} className=' w-7' alt="" />
+        </NavLink>
+        <h2 className=' text-2xl'>¿Que es el insomnio?</h2>
+        <span></span>
+            
         </div>
         <div className={styles.contentImg}>
             <img className={styles.infoImg} src={img} alt="" />
         </div>
+        
+        <div className='max-w-[1100px] mx-auto'>
         <div className='w-5/6 mx-auto mt-1'>
           <p className='text-start'>El insomnio (también llamado trastorno de insomnio) es un problema común del sueño que puede afectar su calidad de vida. Las personas con insomnio tienen dificultad para conciliar el sueño o dormir sin interrupciones. Pueden despertarse durante la noche o muy temprano en la mañana siguiente.
 Sus problemas para dormir pueden aparecer y desaparecer, o podrían ser continuos.</p>
@@ -35,6 +44,8 @@ Sus problemas para dormir pueden aparecer y desaparecer, o podrían ser continuo
           <li>● Practicar técnicas de relajación.</li>
         </ul>
         <hr />
+
+        </div>
     </>
   )
 }

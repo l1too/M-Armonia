@@ -1,16 +1,26 @@
 import styles from './estres.module.css'
 import img from '../../assets/chica.png'
+import icon from '../../assets/flecha3.svg'
+import { NavLink } from 'react-router-dom'
 const Estres = () => {
   return (
     <>
         <div className={styles.titulo}>
-        
-            <h2>¿Que es el estres laboral?</h2>
+           
+        <NavLink to={"/home"}>
+        <img src={icon} className=' w-7' alt="" />
+        </NavLink>
+        <h2 className=' text-2xl'>¿Que es el estres laboral?</h2>
+        <span></span>
+
         </div>
         <div className={styles.contentImg}>
             <img className={styles.infoImg} src={img} alt="" />
         </div>
-        <div className='w-5/6 mx-auto mt-1'>
+        
+       <div className='max-w-[1100px] mx-auto'>
+
+       <div className='w-5/6 mx-auto mt-1'>
           <p className='text-start'>El estrés laboral es aquel que se produce debido a la excesiva presión que tiene lugar en el entorno de trabajo. Generalmente es consecuencia del desequilibrio entre la exigencia laboral (también propia) y la capacidad o recursos disponibles para cumplirla eficientemente. Aunque en ocasiones, también puede originarse por factores completamente ajenos al trabajador. Los síntomas pueden ir desde un ligero mal humor hasta graves depresiones, y casi siempre suelen ir acompañadas de un cierto agotamiento y debilidad física.</p>
         </div>
         <hr className={styles.hr} />
@@ -36,6 +46,8 @@ const Estres = () => {
           <li>● Hemos visto más arriba las graves consecuencias que para las empresas puede significar que sus empleados sufran de estrés laboral.</li>
         </ul>
         <hr />
+
+       </div>
     </>
   )
 }

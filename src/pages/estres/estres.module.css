@@ -2,11 +2,13 @@
     background-color: rgba(245, 66, 145, 1);
     color: white;
     font-weight: bold;
-    height: 2rem;
+    height: 3rem;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .infoImg {
@@ -28,6 +30,5 @@ hr {
 }
 
 .ul {
-    list-style:circle !important;
     text-align: center;
 }

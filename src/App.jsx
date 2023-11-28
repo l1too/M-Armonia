@@ -11,17 +11,19 @@ import Music from './pages/Music/Music'
 import Insomnio from './pages/insomnio/Insomnio'
 import Game from './components/games/Game'
 import Notas from './pages/notas/notas'
+import { DesktopWelcome } from './pages/desktopWelcome/DesktopWelcome'
 
 
 // import { Routes, Route } from 'react-router-dom' 
 
 function App() {
+  const isMobile = window.innerWidth < 600;
 
 
   return (
     
     <Routes>
-      <Route path='/' element={ <Inicio/> }/>
+      <Route path='/' element={ isMobile ? <Inicio/> : <DesktopWelcome/> }/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={ <Login/>}/>
       <Route path='/home' element={ <Home/>}/>
