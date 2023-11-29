@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import loginAction from "../../../redux/actions/loginForm";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
@@ -13,8 +13,7 @@ export default function Login() {
   const passwordRef = useRef();
   const formRef = useRef();
   const dispatch = useDispatch();
-  let store = useSelector((state) => state.loginReducer);
-  console.log(store);
+
   const navigate = useNavigate();
 
 

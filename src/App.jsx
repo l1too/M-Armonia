@@ -9,7 +9,7 @@ import Burnout from './pages/burnout/Burnout'
 import Music from './pages/Music/Music'
 import Insomnio from './pages/insomnio/Insomnio'
 import Game from './components/games/Game'
-import Notas from './pages/notas/notas'
+import Notas from './pages/notas/Notas'
 import { DesktopWelcome } from './pages/desktopWelcome/DesktopWelcome'
 
 
