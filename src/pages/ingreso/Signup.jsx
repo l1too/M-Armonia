@@ -32,7 +32,7 @@ export default function Input() {
           Swal.fire({
               icon: 'success',
               title: 'Gracias por Registrarte!',
-              text: `${res.data.message}`,
+              text: `Verifica tu email para activar tu cuenta`,
           }).then((result) => {
             if (result.isConfirmed) {
               navigate('/login');
@@ -65,15 +65,15 @@ return (
   </div>
 
   <div className="mb-3"></div>
-    <input placeholder="Name" className="form-control text-formulario" type="text" id="name" ref={nameRef} required />
+    <input placeholder="Nombre" className="form-control text-formulario" type="text" id="name" ref={nameRef} required />
   </div>
 
   <div className="mb-3 w-[95%] mx-auto">
-    <input placeholder="Last Name" className="form-control text-formulario" type="text" id="lastname" ref={lastNameRef} required />
+    <input placeholder="Apellido" className="form-control text-formulario" type="text" id="lastname" ref={lastNameRef} required />
   </div>
 
   <div className="mb-3 w-[95%] mx-auto">
-    <input placeholder="Age" className="form-control text-formulario" type="text" id="age" ref={ageRef} required/>
+    <input placeholder="Edad" className="form-control text-formulario" type="text" id="age" ref={ageRef} required/>
   </div>
 
   <div className="mb-3 w-[95%] mx-auto">
@@ -81,7 +81,7 @@ return (
   </div>
 
   <div className="mb-3 w-[95%] mx-auto">
-    <input placeholder="Password" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
+    <input placeholder="Contraseña" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
   </div>
 
      {/* ENLACE A "NO TIENES CUENTA?" */}

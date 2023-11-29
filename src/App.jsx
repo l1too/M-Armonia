@@ -1,7 +1,6 @@
 
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Inicio from './pages/inicio/Inicio'
 import Signup from './pages/ingreso/Signup'
 import Login from './pages/ingreso/Login'
 import { Home } from './pages/home/Home'
@@ -17,13 +16,12 @@ import { DesktopWelcome } from './pages/desktopWelcome/DesktopWelcome'
 // import { Routes, Route } from 'react-router-dom' 
 
 function App() {
-  const isMobile = window.innerWidth < 600;
 
 
   return (
     
     <Routes>
-      <Route path='/' element={ isMobile ? <Inicio/> : <DesktopWelcome/> }/>
+      <Route path='/' element={ <DesktopWelcome/> }/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={ <Login/>}/>
       <Route path='/home' element={ <Home/>}/>
@@ -33,6 +31,7 @@ function App() {
       <Route path='/insomnio' element={ <Insomnio/> }/>
       <Route path='/game' element={ <Game />} />
       <Route path='/notas' element={ <Notas/>} />
+
     </Routes>
 
 

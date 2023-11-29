@@ -14,6 +14,7 @@ export default function Login() {
   const formRef = useRef();
   const dispatch = useDispatch();
   let store = useSelector((state) => state.loginReducer);
+  console.log(store);
   const navigate = useNavigate();
 
 
@@ -65,10 +66,10 @@ export default function Login() {
     <div className="loguearse w-[100%] mx-0">
       <p className="login">Iniciar Sesión</p>
     </div>
-    <input placeholder="Username" id="email" name="email" className="form-control text-formulario" type="email"  ref={emailRef} required/>
+    <input placeholder="Email" id="email" name="email" className="form-control text-formulario" type="email"  ref={emailRef} required/>
   </div>
   <div className="mb-3 w-[95%] mx-auto">
-    <input placeholder="Password" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
+    <input placeholder="Contraseña" className="form-control text-formulario" type="password" id="password" ref={passwordRef} required />
   </div>
      {/* ENLACE A "NO TIENES CUENTA?" */}
 

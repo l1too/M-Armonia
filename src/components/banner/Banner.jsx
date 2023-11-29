@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 export const Banner = () => {
   let token = useSelector((store) => store.loginInReducer.token);
- 
+
   return (
     <>
     <div className={styles.banner}>
@@ -13,6 +13,7 @@ export const Banner = () => {
         <div className={styles.title}>
             <h2 className=' text-xl'>¡ Bienvenido/a !</h2>
             <h2 className=' text-2xl'>{token.name}</h2>
+            {console.log(token)}
         </div>
         <img className={styles.img} src={img} alt="" />
     </div>

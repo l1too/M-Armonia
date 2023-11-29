@@ -33,7 +33,7 @@ export const CarrouselBoton = () => {
   };
   return (
     <div className="text-sm breadcrumbs align-middle">
-  <ul className=' gap-2 justify-center' >
+  <ul className=' gap-2 justify-center flex-wrap' >
     <NavLink to={"/home"} className={styles.boton}>Home</NavLink> 
     {/* Los link se utilizan para navegar, los botones para realizar acciones */}
 
